@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets\styles\app.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="assets/scripts/login.js"></script>
+<!--<script data-main="scripts/app" src="scripts/require.js"></script>-->
+  <title>My Contacts</title>
+</head>
+
+<body>
+    <!--page 1- Log-In-->
+    <div data-role="page" id="category-page">
+      <div data-role="content">
+        <h1>Log In</h1>
+        <div id="wrap">
+          <form id="myForm">
+            <label id=passError></label>
+            <input id="uname" name="uname" data-role="none" type="text" placeholder="username"  data-clear-btn="true">
+  
+            <label id=repassError></label>
+            <input id="pass" name="pass" data-role="none" type="password" placeholder="password" data-clear-btn="true">
+            <a id="submit" data-icon="check"  style="background-color:#3382cc; color: white; text-shadow:none; width: 200px !important;" data-role="button">Log-In</a>
+          </form>
+          <br><br>
+        </div>
+      </div>
+    </div>
+  
+    <!--page 2- main page-->
+    <div data-role="page" id="main-page" data-theme="b" >
+      <div data-role="content">
+        <div id="chooseContact" class="row">
+          <!--<h1 data-role="listview" data-inset="true"> My Contacts</h1>-->
+              <ul id="contactsList" data-role="listview" data-inset="true" data-autodividers="true"></ul>
+        </div>
+      </div>
+    </div>
+    
+        <script src="assets/scripts/app.js"></script>
+        <!--page 3- contact page-->
+        <div data-role="page" id="contactChoosen" data-theme="b" >
+          <div data-role="content">
+            <div id="contactChoosen" hidden=true></div>
+              <h1 id="contactName"></h1>
+              <table>
+                <tr>
+                  <td>
+              <img id="contactImage"></td>
+            </tr>
+            <tr>
+              <td><p id="contactDesc"></p></td>
+            </tr>
+            <tr>
+              <td ><p id="contactMail"></p></td>
+            </tr>
+            <tr>
+             <td><a  href="#main-page" data-icon="back"  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext"></a></td>
+            </tr>
+            </table>
+          </div>
+        </div>
+</body>
+
+</html>
